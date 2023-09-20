@@ -1,0 +1,6 @@
+$i = 185
+foreach ($file in Get-ChildItem -Path "C:\Users\leomu\Downloads\ACCDownload_20230912145402\Audio\*") {
+    $newName = '{0}\{1}.mp3' -f $file.Directory, $i
+    Rename-Item $file.FullName $newName
+    $i++
+}
